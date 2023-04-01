@@ -3,7 +3,7 @@
 
 [**Original embedded-tomcat-template, with descriptions, which is used as a base for this!**](https://github.com/ohjelmointi2/embedded-tomcat-template)
 
-![[screenshot.png]]
+![screenshot](./screenshot.png)
 
 The application is designed and tested to work especially with [Chinook music database](https://github.com/lerocha/chinook-database) (SQLite version).
 
