@@ -14,8 +14,8 @@
     You can view full list of artists and albums included in the database! <br/>
     Or you can search artists by artist name (even partial name is valid)
 </p>
-<a href="<c:out value='${pageContext.request.contextPath}'/>/artists">List All Artists</a>
-<a href="<c:out value='${pageContext.request.contextPath}'/>/albums">Show all albums</a>
+<a href="${pageContext.request.contextPath}/artists"><button>List All Artists</button></a>
+<a href="${pageContext.request.contextPath}/albums"><button>Show all albums</button></a>
 
 <h3>Search Artists:</h3>
 <form method="GET" action="<c:out value='${pageContext.request.contextPath}'/>/artists/search">
