@@ -1,53 +1,35 @@
-<%@ page language="java" contentType="text/html; utf-8"
-	pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="utf-8">
-	<title>Web application test page</title>
-	<link rel="stylesheet" href="/styles/demo.css">
+    <meta charset="UTF-8">
+    <!-- Cool classless css: https://github.com/Kimeiga/bahunya -->
+    <!-- Because everything possible should be in Dark Mode! -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css" type="text/css">
+    <title>Music Database Thing</title>
 </head>
-
 <body>
+<h1>Music Database Thing!</h1>
+<p>
+    You can view full list of artists and albums included in the database! <br/>
+    Or you can search artists by artist name (even partial name is valid)
+</p>
+<a href="<c:out value='${pageContext.request.contextPath}'/>/artists">List All Artists</a>
+<a href="<c:out value='${pageContext.request.contextPath}'/>/albums">Show all albums</a>
 
-	<h1>🎉 Congratulations! 🎉</h1>
+<h3>Search Artists:</h3>
+<form method="GET" action="<c:out value='${pageContext.request.contextPath}'/>/artists/search">
+    <label for="artistName">Artist Name:</label>
+    <input type="text" id="artistName" name="artistName" placeholder="Search Artists" required/>
+    <button type="submit">Search</button>
+</form>
 
-	<p>If you are viewing this page on a browser, several technical
-		components appear to work properly:</p>
-	<ol>
-		<li>First of all, your browser was able to connect to your Tomcat
-			server</li>
-		<li>Second, the server was able to map your request to the <code>IndexServlet</code>
-			class and invoke its <code>doGet</code> method
-		</li>
-		<li>Third, the <code>doGet</code> method added additional
-			information to the request before forwarding it to this JSP file <code>/WEB-INF/index.jsp</code>
-			.
-		</li>
-	</ol>
-	<p>
-		The added information was set in an attribute
-		<code>timeNow</code>
-		and its value is:
-	</p>
-	<p class="time-now">${ timeNow }</p>
-	<p>Try refreshing the page and you will see the dynamic value
-		changing!</p>
-	<div style="background-color: #FFB6C1;">
-		<p class="external-css">
-			If you see this paragraph with a light green background color, your
-			browser was also able to retrieve and external CSS file. The
-			background color is defined in a file <a href="/styles/demo.css">/styles/demo.css</a>,
-			which was served to you by Tomcat as a static file. If the background
-			is red, there was an issue loading the file :(
-		</p>
-	</div>
-	<p>Text may be saved, loaded and transmitted with various different
-		encodings. If you see five star emojis here: ⭐️ ⭐️ ⭐️ ⭐️ ⭐️, it means
-		that the content was properly served and interpreted with UTF-8
-		encoding.</p>
-	<hr />
-
+<h3>Add a new artist</h3>
+<form method="POST" action="<c:out value='${pageContext.request.contextPath}'/>/artists">
+    <label for="artistName2">Artist Name</label>
+    <input type="text" id="artistName2" name="artistName" placeholder="Add Artist" required/>
+    <input type="hidden" name="action" value="add">
+    <button type="submit">Add Artist"</button>
+</form>
 </body>
 </html>
