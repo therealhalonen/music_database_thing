@@ -18,7 +18,7 @@
 <a href="${pageContext.request.contextPath}/albums"><button>Show all albums</button></a>
 
 <h3>Search Artists:</h3>
-<form method="GET" action="${pageContext.request.contextPath}/>/artists/search">
+<form method="GET" action="${pageContext.request.contextPath}/artists/search">
     <label for="artistName">Artist Name:</label>
     <input type="text" id="artistName" name="artistName" placeholder="Search Artists" required/>
     <button type="submit">Search</button>
