@@ -18,14 +18,14 @@
 <a href="${pageContext.request.contextPath}/albums"><button>Show all albums</button></a>
 
 <h3>Search Artists:</h3>
-<form method="GET" action="<c:out value='${pageContext.request.contextPath}'/>/artists/search">
+<form method="GET" action="${pageContext.request.contextPath}/>/artists/search">
     <label for="artistName">Artist Name:</label>
     <input type="text" id="artistName" name="artistName" placeholder="Search Artists" required/>
     <button type="submit">Search</button>
 </form>
 
 <h3>Add a new artist</h3>
-<form method="POST" action="<c:out value='${pageContext.request.contextPath}'/>/artists">
+<form method="POST" action="${pageContext.request.contextPath}/artists">
     <label for="artistName2">Artist Name</label>
     <input type="text" id="artistName2" name="artistName" placeholder="Add Artist" required/>
     <input type="hidden" name="action" value="add">

@@ -36,9 +36,9 @@ Either 'Albums of specific artist' or the 'Full list of albums in database' -->
                 <a href="${pageContext.request.contextPath}/tracks?AlbumId=<c:out value="${albumTitle.getId()}"/>"><c:out
                         value="${albumTitle.getTitle()}"/></a>
                 <!-- Remove Album -->
-                <form action="${pageContext.request.contextPath}/albums?ArtistId=${param.ArtistId}" method="post">
+                <form action="${pageContext.request.contextPath}/albums?ArtistId=<c:out value="${param.ArtistId}"/>" method="post">
                     <input type="hidden" name="action" value="remove" placeholder="Remove Album" required>
-                    <input type="hidden" name="albumId" value="<c:out value='${albumTitle.getId()}'/>">
+                    <input type="hidden" name="albumId" value="<c:out value="${albumTitle.getId()}"/>">
                     <button type="submit" class="btn btn-danger">Remove</button>
                 </form>
             </li>

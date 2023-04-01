@@ -36,17 +36,17 @@
 <ol>
     <c:forEach items="${artists}" var="artist">
         <li>
-            <a href="<c:out value="${pageContext.request.contextPath}"/>/albums?ArtistId=<c:out value="${artist.getId()}"/>"><c:out
+            <a href="${pageContext.request.contextPath}/albums?ArtistId=<c:out value="${artist.getId()}"/>"><c:out
                     value="${artist.getName()}"/></a> <i>Albums: <c:out value="${artist.getAlbumCount()}"/></i>
             <!-- Remove -->
-            <form method="post" action="<c:out value="${pageContext.request.contextPath}"/>/artists">
+            <form method="post" action="${pageContext.request.contextPath}/>/artists">
                 <input type="hidden" name="artistId" value="<c:out value="${artist.getId()}"/>">
                 <input type="hidden" name="action" value="remove">
                 <!-- Handle the passing of "returnUrl", based on the variable: Is the current page "List All" or "Search results -->
                 <c:choose>
                     <c:when test="${not empty param.artistName}">
                         <input type="hidden" name="returnUrl"
-                               value="<c:out value="${pageContext.request.contextPath}"/>artists/search?artistName=<c:out value="${param.artistName}"/>">
+                               value="${pageContext.request.contextPath}"/>artists/search?artistName=<c:out value="${param.artistName}"/>">
                     </c:when>
                     <c:otherwise>
                         <input type="hidden" name="returnUrl" value="/artists">
