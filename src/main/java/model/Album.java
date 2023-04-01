@@ -13,8 +13,12 @@ public class Album {
         this.title = title;
     }
 
-    //  public String getTitle() {
-    //     return title;
-    // }
+    public String getTitle() {
+         return title;
+    }
+
+    public long getId() {
+        return id;
+    }
 
 }

@@ -27,9 +27,9 @@ public class Artist {
         return name;
     }
 
-    //  public long getId() {
-    //     return this.id;
-    // }
+    public long getId() {
+    return this.id;
+    }
 
     // This I wonder... The IDE tells me; it's not used, but everything fails if removed! -Antti
 

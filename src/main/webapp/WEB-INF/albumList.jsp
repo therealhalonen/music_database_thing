@@ -30,7 +30,7 @@
 Either 'Albums of specific artist' or the 'Full list of albums in database' -->
 <c:choose>
     <c:when test="${not empty param.ArtistId}">
-        <h1>Albums of <c:out value="${artist}"/>: </h1>
+        <h1>Albums of <c:out value="${artist.getName()}"/>: </h1>
         <c:forEach items="${albumTitles}" var="albumTitle">
             <li>
                 <a href="${pageContext.request.contextPath}/tracks?AlbumId=<c:out value="${albumTitle.getId()}"/>"><c:out

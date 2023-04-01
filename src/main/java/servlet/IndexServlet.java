@@ -26,6 +26,6 @@ public class IndexServlet extends HttpServlet {
             artists = artistDao.getArtistByName(query);
             request.setAttribute("artists", artists);
         }
-        request.getRequestDispatcher("/WEB-INF/Index.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
     }
 }
