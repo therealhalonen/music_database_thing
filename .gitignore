@@ -1,2 +1,4 @@
 tomcat.8*
 target
+# Remove some autograding stuff
+.github
