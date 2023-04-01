@@ -1,25 +1,31 @@
 package servlet;
 
-import java.io.IOException;
-import java.time.LocalTime;
+import database.ArtistDao;
+import model.Artist;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
 
-@WebServlet("")
+@WebServlet("/")
 public class IndexServlet extends HttpServlet {
 
+    private final ArtistDao artistDao = new ArtistDao();
+    
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String timeString = LocalTime.now().toString();
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String query = request.getParameter("query");
 
-        // pass the time string to the JSP page as an attribute
-        req.setAttribute("timeNow", timeString);
-
-        // forward the request to the index.jsp page
-        req.getRequestDispatcher("/WEB-INF/index.jsp").forward(req, resp);
+        if (query != null && !query.trim().isEmpty()) {
+            // Search for artists based on user input
+            List<Artist> artists;
+            artists = artistDao.getArtistByName(query);
+            request.setAttribute("artists", artists);
+        }
+        request.getRequestDispatcher("/WEB-INF/Index.jsp").forward(request, response);
     }
 }
