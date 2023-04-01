@@ -29,7 +29,7 @@
     <label for="artistName2">Artist Name</label>
     <input type="text" id="artistName2" name="artistName" placeholder="Add Artist" required/>
     <input type="hidden" name="action" value="add">
-    <button type="submit">Add Artist"</button>
+    <button type="submit">Add Artist</button>
 </form>
 </body>
 </html>
