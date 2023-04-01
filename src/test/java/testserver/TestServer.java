@@ -1,16 +1,15 @@
 package testserver;
 
+import launch.Main;
+import org.apache.catalina.LifecycleException;
+import org.apache.catalina.startup.Tomcat;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
-
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.startup.Tomcat;
-
-import launch.Main;
 
 /**
  * Utility class for starting and stopping an embedded Tomcat server and making
