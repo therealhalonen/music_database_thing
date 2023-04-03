@@ -14,11 +14,14 @@ public class Album {
     }
 
     public String getTitle() {
-         return title;
+        return title;
     }
 
     public long getId() {
         return id;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
 }
