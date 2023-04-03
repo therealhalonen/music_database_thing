@@ -52,7 +52,7 @@ Other sources:
 The project was intentionally designed to have as much functionality as possible in one place, meaning that conditional statements are used alot in JSP files and Servlets to determine the page's display and function. This is because the project is small, and the goal was to make it as compact as possible.    
 In a larger project, the code would have been distributed more among separate files.
 
-My new and edited files vs the original template:
+**My new and edited files vs the original template:**
 <pre>
 ├── <a href="pom.xml" >pom.xml</a>
 ├── <a href="README.md" >README.md</a>
@@ -83,3 +83,11 @@ My new and edited files vs the original template:
 │   │           ├── <a href="src/main/webapp/WEB-INF/index.jsp">index.jsp</a>
 │   │           └── <a href="src/main/webapp/WEB-INF/trackList.jsp">trackList.jsp</a>
 </pre>
+
+### Usage instructions
+1. Get [Chinook music database](https://github.com/lerocha/chinook-database) SQlite version.    
+2. In you IDE, add environment variable JDBC_DATABASE_URL with path to downloaded Sqlite file.   
+3. Import the url https://github.com/therealhalonen/music_database_thing to your IDE.   
+4. Run `Main`   
+5. Open browser at http://localhost:8080/   
+6. **Profit!**
