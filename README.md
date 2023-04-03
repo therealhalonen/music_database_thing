@@ -53,34 +53,33 @@ The project was intentionally designed to have as much functionality as possible
 In a larger project, the code would have been distributed more among separate files.
 
 My new and edited files vs the original template:
-```bash
-├── pom.xml
-├── README.md
-├── screenshot.png
+<pre>
+├── <a href="pom.xml" >pom.xml</a>
+├── <a href="README.md" >README.md</a>
+├── <a href="screenshot.png" >screenshot.png</a>
 ├── src
 │   ├── main
 │   │   ├── java
 │   │   │   ├── database
-│   │   │   │   ├── AlbumDao.java
-│   │   │   │   ├── ArtistDao.java
-│   │   │   │   ├── Database.java
-│   │   │   │   └── TrackDao.java
+│   │   │   │   ├── <a href="src/main/java/database/AlbumDao.java">AlbumDao.java</a>
+│   │   │   │   ├── <a href="src/main/java/database/ArtistDao.java">ArtistDao.java</a>
+│   │   │   │   ├── <a href="src/main/java/database/Database.java">Database.java</a>
+│   │   │   │   └── <a href="src/main/java/database/TrackDao.java">TrackDao.java</a>
 │   │   │   ├── launch
 │   │   │   │   └── Main.java #Not edited
 │   │   │   ├── model
-│   │   │   │   ├── Album.java
-│   │   │   │   ├── Artist.java
-│   │   │   │   └── Track.java
+│   │   │   │   ├── <a href="src/main/java/model/Album.java">Album.java</a>
+│   │   │   │   ├── <a href="src/main/java/model/Artist.java">Artist.java</a>
+│   │   │   │   └── <a href="src/main/java/model/Track.java">Track.java</a>
 │   │   │   └── servlet
-│   │   │       ├── AlbumsServlet.java
-│   │   │       ├── ArtistsServlet.java
-│   │   │       ├── IndexServlet.java
-│   │   │       ├── SearchServlet.java
-│   │   │       └── TrackListServlet.java
+│   │   │       ├── <a href="src/main/java/servlet/AlbumsServlet.java">AlbumsServlet.java</a>
+│   │   │       ├── <a href="src/main/java/servlet/ArtistsServlet.java">ArtistsServlet.java</a>
+│   │   │       ├── <a href="src/main/java/servlet/IndexServlet.java">IndexServlet.java</a>
+│   │   │       └── <a href="src/main/java/servlet/TrackListServlet.java">TrackListServlet.java</a>
 │   │   └── webapp 
 │   │       └── WEB-INF
-│   │           ├── albumList.jsp
-│   │           ├── artistList.jsp
-│   │           ├── Index.jsp
-│   │           └── TrackList.jsp
-```
+│   │           ├── <a href="src/main/webapp/WEB-INF/albumList.jsp">albumList.jsp</a>
+│   │           ├── <a href="src/main/webapp/WEB-INF/artistList.jsp">artistList.jsp</a>
+│   │           ├── <a href="src/main/webapp/WEB-INF/index.jsp">index.jsp</a>
+│   │           └── <a href="src/main/webapp/WEB-INF/trackList.jsp">trackList.jsp</a>
+</pre>
