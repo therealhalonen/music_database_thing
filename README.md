@@ -88,6 +88,7 @@ In a larger project, the code would have been distributed more among separate fi
 1. Get [Chinook music database](https://github.com/lerocha/chinook-database) SQlite version.    
 2. In you IDE, add environment variable JDBC_DATABASE_URL with path to downloaded Sqlite file.   
 3. Import the url https://github.com/therealhalonen/music_database_thing to your IDE.   
-4. Run `Main`   
-5. Open browser at http://localhost:8080/   
-6. **Profit!**
+4. If any errors and stuff: Update/Reload Maven dependencies!!
+5. Run `Main`   
+6. Open browser at http://localhost:8080/   
+7. **Profit!**
